@@ -1,0 +1,21 @@
+.fonctionnement {
+    & ol {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @media (min-width: 850px) {
+            flex-direction: row;
+        }
+    }
+    & li {
+        background-color: #f3f3f3;
+        padding: 1rem 2rem;
+        border: 1px solid red;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include shadow;
+        &:hover {
+            @include opacityshadow;
+        }
+    }
+}

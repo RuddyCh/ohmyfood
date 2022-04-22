@@ -1,78 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+@import "./base/base";
 
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
+/* mixins */
 
-body {
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-}
+@import "./utils/mixins";
 
 /* HEADER */
 
-header {
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    padding: 0.1rem;
-    font-size: 16px;
-    margin: 0;
-    position: relative;
-}
+@import "./layouts/header";
 
 /* Point restaurant Paris */
 
-main .paris {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background-color: #F3F3F3;
-    text-align: center;
-    padding: 1.2rem;
-    font-size: 0.5cm;
-    font-weight: 600;
-}
-
-main .paris i {
-    font-size: 1.3rem;
-}
+@import "./layouts/paris";
 
 /* Restaurant explorer */
 
-.restaurantexplorer {
-    text-align: center;
-    background-color: #fafafa;
-    padding: 1rem;
-}
+@import "./layouts/explorer";
 
-.restaurantexplorer h2 {
-    margin-top: 2rem;
-    font-size: 1.7rem;
-}
+/* Restaurant explorer */
 
-.restaurantexplorer p {
-    font-size: 1.5rem;
-    font-weight: lighter;
-}
-
-.restaurantexplorer button {
-    background-image: linear-gradient(#FF79DA, #9356DC);
-    color: white;
-    font-weight: normal;
-    font-size: medium;
-    padding: 1rem;
-    border: none;
-    border-radius: 2rem;
-    box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.28);
-    cursor: pointer;
-    margin-bottom: 3rem;
-}
-
-.restaurantexplorer button:hover {
-    opacity: 0.9;
-    box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.50);
-}
+@import "./components/fonctionnement";

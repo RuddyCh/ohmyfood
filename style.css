@@ -10,6 +10,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
+/* mixins */
 /* HEADER */
 header {
   font-family: "Shrikhand", cursive;
@@ -22,7 +27,7 @@ header {
 }
 
 /* Point restaurant Paris */
-main .paris {
+.paris {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,8 +38,7 @@ main .paris {
   font-size: 0.5cm;
   font-weight: 600;
 }
-
-main .paris i {
+.paris i {
   font-size: 1.3rem;
 }
 
@@ -44,17 +48,14 @@ main .paris i {
   background-color: #fafafa;
   padding: 1rem;
 }
-
 .restaurantexplorer h2 {
   margin-top: 2rem;
   font-size: 1.7rem;
 }
-
 .restaurantexplorer p {
   font-size: 1.5rem;
   font-weight: lighter;
 }
-
 .restaurantexplorer button {
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -63,12 +64,35 @@ main .paris i {
   padding: 1rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.28);
   cursor: pointer;
   margin-bottom: 3rem;
+  box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.28);
+}
+.restaurantexplorer button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.5);
 }
 
-.restaurantexplorer button:hover {
+/* Restaurant explorer */
+.fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 850px) {
+  .fonctionnement ol {
+    flex-direction: row;
+  }
+}
+.fonctionnement li {
+  background-color: #f3f3f3;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.28);
+}
+.fonctionnement li:hover {
   opacity: 0.9;
   box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.5);
 }
