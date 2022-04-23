@@ -1,5 +1,9 @@
 @import "./base/base";
 
+/* Variables */
+
+@import "./utils/variables";
+
 /* mixins */
 
 @import "./utils/mixins";
@@ -16,6 +20,6 @@
 
 @import "./layouts/explorer";
 
-/* Restaurant explorer */
+/* Fonctionnement */
 
 @import "./components/fonctionnement";

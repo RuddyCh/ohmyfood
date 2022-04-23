@@ -1,21 +1,41 @@
 .fonctionnement {
+    counter-reset: tuto;
+    padding: 0 1rem;
     & ol {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        @media (min-width: 850px) {
+        gap: 2rem;
+        @media (min-width: 1000px) {
             flex-direction: row;
         }
     }
     & li {
-        background-color: #f3f3f3;
-        padding: 1rem 2rem;
-        border: 1px solid red;
+        position: relative;
+        background-color: $color-lightgrey;
+        padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
+        list-style-type: none;
         @include shadow;
         &:hover {
             @include opacityshadow;
+        }
+        & i.fa-solid {
+            color: grey;
+            margin-right: 1rem;
+        }
+        &::before {
+            content: counter(tuto);
+            counter-increment: tuto;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            left: -12px;
+            color: #fff;
+            background-color: $color-primary;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
         }
     }
 }

@@ -11,7 +11,7 @@
         font-weight: lighter;
     }
     & button {
-        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-image: linear-gradient($color-secondary, $color-primary);
         color: white;
         font-weight: normal;
         font-size: medium;
