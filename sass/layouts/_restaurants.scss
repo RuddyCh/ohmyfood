@@ -1,0 +1,27 @@
+.restaurants {
+    background-color: $color-lightgrey;
+    padding: 0 1rem;
+    & h2 {
+        padding-top: 3rem;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .card {
+        @media (min-width: $breakpoint) {
+            flex-grow: 1;
+            width: 45%;
+        }
+        flex-grow: 1;
+        border-radius: 1rem;
+        &__img {
+                height: 12rem;
+                width: 100%;
+                object-fit: cover;
+                min-width: 30rem;
+                border-radius: 1rem 1rem 0 0;
+        }
+    }
+}

@@ -79,6 +79,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 10px;
 }
 @media (min-width: 1000px) {
   .fonctionnement ol {
@@ -114,6 +115,37 @@ header {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
+}
+
+/* Restaurants */
+.restaurants {
+  background-color: #f3f3f3;
+  padding: 0 1rem;
+}
+.restaurants h2 {
+  padding-top: 3rem;
+}
+.restaurants__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.restaurants .card {
+  flex-grow: 1;
+  border-radius: 1rem;
+}
+@media (min-width: 1000px) {
+  .restaurants .card {
+    flex-grow: 1;
+    width: 45%;
+  }
+}
+.restaurants .card__img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  min-width: 30rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */
