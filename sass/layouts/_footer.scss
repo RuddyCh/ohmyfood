@@ -1,0 +1,24 @@
+footer {
+    background-color: darken($color-lightgrey, 75%);
+    color: white;
+    & .footer {
+        max-width: 1440px;
+        margin: auto;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+     & h1 {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: lighter;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        }
+     & a {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+      }
+    }
+}

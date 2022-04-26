@@ -15,11 +15,14 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
 /* Variables */
 /* mixins */
 /* HEADER */
 header {
-  font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
   padding: 0.1rem;
@@ -78,6 +81,8 @@ header {
 
 /* Fonctionnement */
 .fonctionnement {
+  max-width: 1440px;
+  margin: auto;
   counter-reset: tuto;
   padding: 0 1rem;
 }
@@ -133,6 +138,10 @@ h3, p {
   padding: 0 1rem;
   padding-bottom: 2rem;
 }
+.restaurants__global {
+  margin: auto;
+  max-width: 1440px;
+}
 .restaurants h2 {
   padding-top: 3rem;
 }
@@ -158,11 +167,14 @@ h3, p {
 }
 .restaurants .card {
   flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
   border-radius: 1rem;
   background-color: white;
 }
 @media (min-width: 1000px) {
   .restaurants .card {
+    flex-direction: row;
     flex-grow: 1;
     width: 45%;
   }
@@ -171,7 +183,6 @@ h3, p {
   height: 12rem;
   width: 100%;
   object-fit: cover;
-  min-width: 30rem;
   border-radius: 1rem 1rem 0 0;
 }
 .restaurants .card__description {
@@ -191,6 +202,32 @@ h3, p {
   position: absolute;
   right: 1rem;
   top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #343434;
+  color: white;
+}
+footer .footer {
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+footer .footer a {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

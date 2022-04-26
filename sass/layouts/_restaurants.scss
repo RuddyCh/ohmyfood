@@ -6,6 +6,10 @@ h3, p {
     background-color: $color-lightgrey;
     padding: 0 1rem;
     padding-bottom: 2rem;
+    &__global {
+        margin: auto;
+        max-width: 1440px;
+    }
     & h2 {
         padding-top: 3rem;
     }
@@ -31,17 +35,19 @@ h3, p {
     }
     .card {
         @media (min-width: $breakpoint) {
+            flex-direction: row;
             flex-grow: 1;
             width: 45%;
         }
         flex-grow: 1;
+        flex-direction: column;
+        width: 100%;
         border-radius: 1rem;
         background-color: white;
         &__img {
                 height: 12rem;
                 width: 100%;
                 object-fit: cover;
-                min-width: 30rem;
                 border-radius: 1rem 1rem 0 0;
         }
         &__description {
