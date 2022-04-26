@@ -86,6 +86,7 @@ header {
 .restaurantexplorer button:hover {
   opacity: 0.9;
   box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.28);
+  transform: scale(1.1);
 }
 
 /* Fonctionnement */
