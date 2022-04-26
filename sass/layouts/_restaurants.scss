@@ -5,7 +5,7 @@ h3, p {
 .restaurants {
     background-color: $color-lightgrey;
     padding: 0 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     &__global {
         margin: auto;
         max-width: 1440px;
@@ -16,7 +16,10 @@ h3, p {
     &__cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1rem;
+        @media (min-width: $breakpoint) {
+            gap: 3rem;
+        }
         .new {
             position: relative;
             &::before {
@@ -39,11 +42,16 @@ h3, p {
             flex-grow: 1;
             width: 45%;
         }
+        @include shadow;
+        @include transition;
         flex-grow: 1;
         flex-direction: column;
         width: 100%;
         border-radius: 1rem;
         background-color: white;
+        &:hover {
+            @include opacityshadow
+        }
         &__img {
                 height: 12rem;
                 width: 100%;
@@ -66,6 +74,18 @@ h3, p {
                 position: absolute;
                 right: 1rem;
                 top: 1rem;
+            }
+            & .fa-solid {
+                @include gradient;
+                @include transition;
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
             }
         }
     }

@@ -3,6 +3,10 @@
     margin: auto;
     counter-reset: tuto;
     padding: 0 1rem;
+    padding-bottom: 1rem;
+    & h2 {
+        margin-top: 3rem;
+    }
     & ol {
         display: flex;
         flex-direction: column;
@@ -20,6 +24,7 @@
         border-radius: 1rem;
         list-style-type: none;
         @include shadow;
+        @include transition;
         &:hover {
             @include opacityshadow;
         }
