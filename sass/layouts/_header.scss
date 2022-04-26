@@ -5,4 +5,9 @@ header {
     font-size: 16px;
     margin: 0;
     position: relative;
+    padding-block-start: 1rem;
+    padding-block-end: 0.5rem;
+    @media (min-width: $breakpoint) {
+        font-size: 30px;
+        }
 }

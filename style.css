@@ -17,6 +17,7 @@ a {
 
 h1 {
   font-family: "Shrikhand", cursive;
+  margin: 0;
 }
 
 /* Variables */
@@ -29,6 +30,13 @@ header {
   font-size: 16px;
   margin: 0;
   position: relative;
+  padding-block-start: 1rem;
+  padding-block-end: 0.5rem;
+}
+@media (min-width: 1000px) {
+  header {
+    font-size: 30px;
+  }
 }
 
 /* Point restaurant Paris */
@@ -205,6 +213,42 @@ h3, p {
 .restaurants .card__description {
   position: relative;
 }
+.restaurants .card__description::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-regular);
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+.restaurants .card__description::after {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.restaurants .card__description:hover::after {
+  transition: all 150ms ease-in-out;
+  opacity: 1;
+  transform: scale(1.1);
+}
 .restaurants .card__description h3 {
   padding-top: 0.6rem;
   padding-left: 0.5rem;
@@ -213,24 +257,6 @@ h3, p {
   margin-top: 0.4rem;
   margin-left: 0.5rem;
   margin-bottom: 1rem;
-}
-.restaurants .card__description i {
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-.restaurants .card__description .fa-solid {
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  transition: all 150ms ease-in-out;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-}
-.restaurants .card__description .fa-solid:hover {
-  opacity: 1;
-  transform: scale(1.1);
 }
 
 /* Footer */
@@ -244,6 +270,14 @@ footer .footer {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1000px) {
+  footer .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0rem;
+  }
 }
 footer .footer h1 {
   margin: 0;

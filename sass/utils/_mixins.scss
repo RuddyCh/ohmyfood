@@ -14,3 +14,19 @@
 @mixin transition {
     transition: all 150ms ease-in-out;
 }
+
+@mixin coeur($opacity: 1, $font: var(--fa-font-regular), $color: inherit) {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: $font;
+    content: "\f004";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: $color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: $opacity;
+}
