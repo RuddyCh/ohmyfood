@@ -22,6 +22,15 @@ h1 {
 
 /* Variables */
 /* mixins */
+/* Animations */
+@keyframes check-spin {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 /* HEADER */
 header {
   text-align: center;
@@ -299,9 +308,10 @@ footer .footer a {
   margin-bottom: 2rem;
 }
 .menus__titrerestaurant h1 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   padding-top: 2rem;
   margin-left: 1rem;
+  font-weight: lighter;
 }
 .menus__titrerestaurant .coeur {
   position: absolute;
@@ -324,9 +334,6 @@ footer .footer a {
 }
 .menus .menu {
   background-color: #f3f3f3;
-  gap: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -337,8 +344,16 @@ footer .footer a {
   }
 }
 .menus .menu__list {
-  gap: 1rem;
   width: 100%;
+  overflow: hidden;
+  padding: 0 0.7rem;
+  margin-bottom: 2rem;
+}
+.menus .menu__list h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .menus .menu__list--item {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
@@ -347,9 +362,19 @@ footer .footer a {
   border-radius: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .menus .menu__list--item .menudescription {
   margin: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus .menu__list--item .menudescription h3,
+.menus .menu__list--item .menudescription p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menus .menu__list--item .price {
   margin-left: auto;
@@ -364,11 +389,16 @@ footer .footer a {
   margin-right: -4rem;
   width: 4rem;
   transition: margin-right 0.5s ease-out;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 .menus .menu__list--item:hover .check {
   margin-right: 0;
+}
+.menus .menu__list--item:hover .check i {
+  animation: check-spin 500ms ease-in-out;
 }
 .menus .menu__list--item i {
   font-size: 1.2rem;

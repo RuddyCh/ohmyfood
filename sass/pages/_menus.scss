@@ -19,9 +19,10 @@
         position: relative;
         margin-bottom: 2rem;
         & h1 {
-            font-size: 1.5em;
+            font-size: 1.7em;
             padding-top: 2rem;
             margin-left: 1rem;
+            font-weight: lighter;
         }
         .coeur {
             position: absolute;
@@ -48,15 +49,20 @@
             flex-direction: row;
         }
         background-color: $color-lightgrey;
-        gap: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         &__list {
-            gap: 1rem;
             width: 100%;
+            overflow: hidden;
+            padding: 0 0.7rem;
+            margin-bottom: 2rem;
+            & h2 {
+                margin-top: 0;
+                margin-bottom: 2rem;
+                font-weight: normal;
+                text-transform: uppercase;
+            }
             &--item {
                 @include shadow;
                 display: flex;
@@ -64,8 +70,18 @@
                 border-radius: 1rem;
                 margin-bottom: 1rem;
                 overflow: hidden;
+                cursor: pointer;
                 & .menudescription {
                     margin: 1rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    & h3, 
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
                 & .price {
                     margin-left: auto;
@@ -80,11 +96,18 @@
                     margin-right: -4rem;
                     width: 4rem;
                     transition: margin-right 0.5s ease-out;
-                    display: grid;
-                    place-items: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
                 }
-                &:hover .check {
+                &:hover {
+                    & .check {
                     margin-right: 0;
+                        & i {
+                            animation: check-spin 500ms ease-in-out;
+                        }
+                    }
                 }
                 & i {
                     font-size: 1.2rem;
