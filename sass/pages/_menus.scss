@@ -44,13 +44,59 @@
         }
     }
     & .menu {
+        @media (min-width: $breakpoint) {
+            flex-direction: row;
+        }
         background-color: $color-lightgrey;
+        gap: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         &__list {
-            border: 1px solid red;
+            gap: 1rem;
+            width: 100%;
+            &--item {
+                @include shadow;
+                display: flex;
+                background-color: white;
+                border-radius: 1rem;
+                margin-bottom: 1rem;
+                overflow: hidden;
+                & .menudescription {
+                    margin: 1rem;
+                }
+                & .price {
+                    margin-left: auto;
+                    margin-top: auto;
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                    font-weight: bold;
+                }
+                & .check {
+                    background-color: $color-tertiary;
+                    border-radius: 0 1rem 1rem 0;
+                    margin-right: -4rem;
+                    width: 4rem;
+                    transition: margin-right 0.5s ease-out;
+                    display: grid;
+                    place-items: center;
+                }
+                &:hover .check {
+                    margin-right: 0;
+                }
+                & i {
+                    font-size: 1.2rem;
+                    background: white;
+                    color: $color-tertiary;
+                    border-radius: 50%;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    display: grid;
+                    place-items: center;
+                }
+            }
         }
     }
 }

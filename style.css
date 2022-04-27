@@ -324,13 +324,61 @@ footer .footer a {
 }
 .menus .menu {
   background-color: #f3f3f3;
+  gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
+@media (min-width: 1000px) {
+  .menus .menu {
+    flex-direction: row;
+  }
+}
 .menus .menu__list {
-  border: 1px solid red;
+  gap: 1rem;
+  width: 100%;
+}
+.menus .menu__list--item {
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.menus .menu__list--item .menudescription {
+  margin: 1rem;
+}
+.menus .menu__list--item .price {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.menus .menu__list--item .check {
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s ease-out;
+  display: grid;
+  place-items: center;
+}
+.menus .menu__list--item:hover .check {
+  margin-right: 0;
+}
+.menus .menu__list--item i {
+  font-size: 1.2rem;
+  background: white;
+  color: #99e2d0;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
