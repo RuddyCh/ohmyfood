@@ -27,6 +27,7 @@
         @include transition;
         &:hover {
             @include opacityshadow;
+            background-color: lighten($color-primary, 30%);
         }
         & i.fa-solid {
             color: grey;
