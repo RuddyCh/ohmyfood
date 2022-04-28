@@ -31,6 +31,19 @@ h1 {
     transform: rotate(0);
   }
 }
+@keyframes menuappears {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* HEADER */
 header {
   text-align: center;
@@ -373,6 +386,33 @@ footer .footer a {
   padding: 0 0.7rem;
   margin-bottom: 2rem;
 }
+.menus .menu__list .time1 {
+  animation-delay: 0ms;
+}
+.menus .menu__list .time2 {
+  animation-delay: 100ms;
+}
+.menus .menu__list .time3 {
+  animation-delay: 200ms;
+}
+.menus .menu__list .time4 {
+  animation-delay: 300ms;
+}
+.menus .menu__list .time5 {
+  animation-delay: 400ms;
+}
+.menus .menu__list .time6 {
+  animation-delay: 500ms;
+}
+.menus .menu__list .time7 {
+  animation-delay: 600ms;
+}
+.menus .menu__list .time8 {
+  animation-delay: 700ms;
+}
+.menus .menu__list .time9 {
+  animation-delay: 800ms;
+}
 .menus .menu__list h2 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -397,6 +437,7 @@ footer .footer a {
   margin-bottom: 1rem;
   overflow: hidden;
   cursor: pointer;
+  animation: menuappears 1000ms both cubic-bezier(0.45, 1.57, 0.35, 0.85);
 }
 .menus .menu__list--item .menudescription {
   margin: 1rem;

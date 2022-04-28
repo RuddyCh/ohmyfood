@@ -73,6 +73,36 @@
         flex-direction: column;
         justify-content: space-between;
         &__list {
+            .time1 {
+                animation-delay: 0ms;
+            }
+            
+            .time2 {
+                animation-delay: 100ms;
+            }
+            
+            .time3 {
+                animation-delay: 200ms;
+            }
+            
+            .time4 {
+                animation-delay: 300ms;
+            }
+            .time5 {
+                animation-delay: 400ms;
+            }
+            .time6 {
+                animation-delay: 500ms;
+            }
+            .time7 {
+                animation-delay: 600ms;
+            }
+            .time8 {
+                animation-delay: 700ms;
+            }
+            .time9 {
+                animation-delay: 800ms;
+            }
             width: 100%;
             overflow: hidden;
             padding: 0 0.7rem;
@@ -101,6 +131,7 @@
                 margin-bottom: 1rem;
                 overflow: hidden;
                 cursor: pointer;
+                animation: menuappears 1000ms both cubic-bezier(.45, 1.57, .35, .85);
                 & .menudescription {
                     margin: 1rem;
                     overflow: hidden;
