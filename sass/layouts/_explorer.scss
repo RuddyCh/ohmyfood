@@ -12,20 +12,6 @@
         margin-bottom: 1.5rem;
     }
     & button {
-        @include gradient;
-        @include shadow;
-        @include transition;
-        color: white;
-        font-weight: normal;
-        font-size: medium;
-        padding: 1rem;
-        border: none;
-        border-radius: 2rem;
-        cursor: pointer;
-        margin-bottom: 3rem;
-        &:hover {
-            @include opacityshadow;
-            transform: scale(1.1);
-        }
+        @include button;
     }
 }

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RuddyCh/ohmyfood#readme",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "sass": "^1.50.1"
   }
 }

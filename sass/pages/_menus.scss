@@ -1,3 +1,23 @@
+.headerarrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & a {
+        @include transition;
+        position: absolute;
+        left: 3%;
+        font-size: large;
+        &:hover {
+            transform: scale(1.1);
+        }
+        @media (min-width: $breakpoint) {
+            left: 5%;
+            font-size: 2rem;
+        }
+    }
+}
+
 
 .banniere img {
     max-width: 100%;
@@ -62,6 +82,16 @@
                 margin-bottom: 2rem;
                 font-weight: normal;
                 text-transform: uppercase;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 0.25rem;
+                    width: 3.8rem;
+                    background-color: $color-tertiary;
+                    top: 2.1rem;
+                    left: 0.1rem;
+                }
             }
             &--item {
                 @include shadow;
@@ -121,5 +151,15 @@
                 }
             }
         }
+    }
+}
+
+.shopbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & button {
+        @include button;
+        margin-bottom: 13%;
     }
 }

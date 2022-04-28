@@ -42,6 +42,9 @@ header {
   padding-block-start: 1rem;
   padding-block-end: 0.5rem;
 }
+header h1 {
+  margin: 0;
+}
 @media (min-width: 1000px) {
   header {
     font-size: 30px;
@@ -269,7 +272,6 @@ footer .footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 0rem;
   }
 }
 footer .footer h1 {
@@ -287,6 +289,28 @@ footer .footer a {
 }
 
 /* Pages Menus */
+.headerarrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.headerarrow a {
+  transition: all 150ms ease-in-out;
+  position: absolute;
+  left: 3%;
+  font-size: large;
+}
+.headerarrow a:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 1000px) {
+  .headerarrow a {
+    left: 5%;
+    font-size: 2rem;
+  }
+}
+
 .banniere img {
   max-width: 100%;
   width: 100%;
@@ -354,6 +378,16 @@ footer .footer a {
   margin-bottom: 2rem;
   font-weight: normal;
   text-transform: uppercase;
+  position: relative;
+}
+.menus .menu__list h2::after {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  width: 3.8rem;
+  background-color: #99e2d0;
+  top: 2.1rem;
+  left: 0.1rem;
 }
 .menus .menu__list--item {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
@@ -409,6 +443,31 @@ footer .footer a {
   height: 1.5rem;
   display: grid;
   place-items: center;
+}
+
+.shopbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopbutton button {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  transition: all 150ms ease-in-out;
+  color: white;
+  font-weight: normal;
+  font-size: medium;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  margin-bottom: 13%;
+}
+.shopbutton button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.28);
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */
