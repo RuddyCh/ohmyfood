@@ -1,8 +1,8 @@
 @keyframes check-spin {
-    0% {
+    from {
         transform: rotate(-90deg);
     }
-    100% {
+    to {
         transform: rotate(0);
     }
 }
@@ -18,5 +18,55 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Animation loading */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: $color-lightgrey;
+    opacity: 0.8;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    animation: load 600ms 3s both ease-in-out;
+    transform-origin: bottom;
+    & i {
+        animation: spin 3s ease-in-out;
+        background: -webkit-linear-gradient($color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes load {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(360deg);
+    }
+    
+    66% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
