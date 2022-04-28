@@ -62,6 +62,7 @@ h1 {
   animation: spin 3s ease-in-out;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
