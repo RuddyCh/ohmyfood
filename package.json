@@ -4,7 +4,8 @@
   "description": "Projet 3 OpenClassRooms OhMyFood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:style.css"
+    "sass": "sass --watch ./sass/style.scss:style.css",
+    "pcss": "postcss style.css -u autoprefixer cssnano -o ./post_css/style_min.css"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,11 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "sass": "^1.50.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0"
   }
 }
