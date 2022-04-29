@@ -6,7 +6,6 @@
 }
 
 body {
-  margin: 0px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -456,6 +455,9 @@ footer .footer a {
 }
 .menus .menu__list .time9 {
   animation-delay: 800ms;
+}
+.menus .menu__list .time10 {
+  animation-delay: 900ms;
 }
 .menus .menu__list h2 {
   margin-top: 0;
