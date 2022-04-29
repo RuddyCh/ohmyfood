@@ -23,11 +23,16 @@
         flex-grow: 1;
         border-radius: 1rem;
         list-style-type: none;
+        display: flex;
+        align-items: center;
         @include shadow;
         @include transition;
         &:hover {
             @include opacityshadow;
             background-color: lighten($color-primary, 30%);
+            & i::before {
+                color: $color-primary;
+            }
         }
         & i.fa-solid {
             color: grey;
