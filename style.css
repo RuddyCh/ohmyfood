@@ -343,6 +343,12 @@ footer .footer a {
   margin-bottom: 0.5rem;
   margin-top: 0;
 }
+footer .footer .fa-utensils {
+  padding-right: 0.8rem;
+}
+footer .footer .fa-handshake-angle {
+  padding-right: 0.4rem;
+}
 
 /* Pages Menus */
 .headerarrow {
