@@ -33,7 +33,7 @@
     height: 100vh;
     inset: 0;
     z-index: 1;
-    animation: load 600ms 3s both ease-in-out;
+    animation: load 600ms 3s backwards ease-in-out;
     transform-origin: bottom;
     & i {
         animation: spin 3s ease-in-out;

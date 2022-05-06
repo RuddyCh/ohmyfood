@@ -54,7 +54,7 @@ h1 {
   height: 100vh;
   inset: 0;
   z-index: 1;
-  animation: load 600ms 3s both ease-in-out;
+  animation: load 600ms 3s backwards ease-in-out;
   transform-origin: bottom;
 }
 .loading i {
@@ -520,7 +520,7 @@ footer .footer .fa-handshake-angle {
   border-radius: 0 1rem 1rem 0;
   margin-right: -4rem;
   width: 4rem;
-  transition: margin-right 0.5s ease-out;
+  transition: margin-right 0.5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,7 +530,7 @@ footer .footer .fa-handshake-angle {
   margin-right: 0;
 }
 .menus .menu__list--item:hover .check i {
-  animation: check-spin 500ms ease-in-out;
+  animation: check-spin 500ms both ease-in-out;
 }
 .menus .menu__list--item i {
   font-size: 1.2rem;
